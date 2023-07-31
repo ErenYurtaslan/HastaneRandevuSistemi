@@ -1,8 +1,8 @@
-﻿using asp_udemy_proje1.Models;
+﻿using HastaneRandevuSistemi.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace asp_udemy_proje1.Controllers
+namespace HastaneRandevuSistemi.Controllers
 {
     public class HomeController : Controller
     {
