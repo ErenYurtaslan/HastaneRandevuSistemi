@@ -1,8 +1,9 @@
-using Microsoft.EntityFrameworkCore;
-using asp_udemy_proje1.Utility;
-using asp_udemy_proje1.Models;
+ï»¿using Microsoft.EntityFrameworkCore;
+using HastaneRandevuSistemi.Utility;
+using HastaneRandevuSistemi.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
+//DÃ–NÃœLECEK using Microsoft.AspNetCore.Identity.UI.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,20 +12,20 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<UygulamaDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>/*iþin içine roller girince kod bu þekilde deðiþti*/(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<UygulamaDbContext>()/*saðdaki kýsým, register'a týklayýnca hata almamak için yazýlan parçalardan biri.*/.AddDefaultTokenProviders();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>/*iÃ¾in iÃ§ine roller girince kod bu Ã¾ekilde deÃ°iÃ¾ti*/(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<UygulamaDbContext>()/*saÄŸdaki kÄ±sÄ±m, register'a tÄ±klayÄ±nca hata almamak iÃ§in yazÄ±lan parÃ§alardan biri.*/.AddDefaultTokenProviders();
 
-builder.Services.AddRazorPages();//login adminle alakalý parçalardan biri
+builder.Services.AddRazorPages();//login adminle alakalÄ± parÃ§alardan biri
 
 //_kitapTuruRepository nesnesi => Dependency Injection
-builder.Services.AddScoped<IKitapTuruRepository, KitapTuruRepository>();
+builder.Services.AddScoped<IDoktorBransRepository, DoktorBransRepository>();
 
 //_kitapRepository nesnesi => Dependency Injection
-builder.Services.AddScoped<IKitapRepository, KitapRepository>();
+builder.Services.AddScoped<IDoktorRepository, DoktorRepository>();
 
 //_kiralamapRepository nesnesi => Dependency Injection
-builder.Services.AddScoped<IKiralamaRepository, KiralamaRepository>();
+builder.Services.AddScoped<IRandevuRepository, RandevuRepository>();
 
-builder.Services.AddScoped<IEmailSender, EmailSender>();
+// DÃ–NÃœLECEK builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 
@@ -43,7 +44,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();//login adminle alakalý parçalardan biri
+app.MapRazorPages();//login adminle alakalÃ½ parÃ§alardan biri
 
 app.MapControllerRoute(
     name: "default",
