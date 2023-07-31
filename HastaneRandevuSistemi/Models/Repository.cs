@@ -7,7 +7,7 @@ namespace HastaneRandevuSistemi.Models
     public class Repository<T> : IRepository<T> where T : class
     {
         private readonly UygulamaDbContext _uygulamaDbContext;
-        internal DbSet<T> dbSet;//_uygulamaDbContext.KitapTurleri ile aynı şey olacak
+        internal DbSet<T> dbSet;
 
         public Repository(UygulamaDbContext context)
         {
@@ -17,7 +17,7 @@ namespace HastaneRandevuSistemi.Models
         }
         public void Ekle(T entitiy)
         {
-            // _uygulamaDbContext.KitapTurleri.Add(kitapTuruEkle); yerine artık aşağısı var.
+            
             dbSet.Add(entitiy);
         }
 
@@ -53,7 +53,7 @@ namespace HastaneRandevuSistemi.Models
 
         public void Sil(T entitiy)
         {
-            //_uygulamaDbContext.KitapTurleri.Remove(kitapTuru); yerine artık aşağısı var.
+            
             dbSet.Remove(entitiy);
         }
 
