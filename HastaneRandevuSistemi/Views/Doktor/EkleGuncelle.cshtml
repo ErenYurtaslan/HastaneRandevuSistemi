@@ -1,0 +1,104 @@
+﻿@model Doktor
+
+@{
+    ViewData["Title"] = Model == null ? "Doktor Ekle" : " Doktor Güncelle";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="ResimUrl" hidden />
+    <!--
+        eğer modeldeki metodun adı Id yerine bambaşka bir şey olsaydı, bu satırı yazmayınca program hata verirdi.(şu an örnek olsun diye yazıldı)
+        Çünkü buradaki "Id" ismi asp için özel bir isim ve bu ismi koyduğun an bunun databasedeki "id" kavramına eşdeğer olduğunu sistem otomatik olarak algılıyor.
+    -->
+
+    <div class="row">
+        <!--row görünümü verdik, 12 birimlik satırın 10 birimi tablonun, 2 birimi kitap görselinin olacak-->
+        <div class="col-10">
+            <div class="border p-3 mt-5">
+
+                <div class="row pb-3">
+                    <h2 class="text-primary">@(Model == null ? "Doktor Ekle" : "Doktor Güncelle")</h2>
+                    <br>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DoktorAdi" class="p-0"></label>
+                    <input asp-for="DoktorAdi" class="form-control" />
+                    <span asp-validation-for="DoktorAdi" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DoktorBransId" class="p-0"></label>
+                    <select asp-for="DoktorBransId" asp-items="ViewBag.DoktorBransList" class="form-select"></select><!--burada db'den gelen tüm kitap türleri gelecek, istediğimizi seçeceğiz.-->
+                    <span asp-validation-for="DoktorBransId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Poliklinik" class="p-0"></label>
+                    <input asp-for="Poliklinik" class="form-control" />
+                    <span asp-validation-for="Poliklinik" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Calisma" class="p-0"></label>
+                    <input asp-for="Calisma" class="form-control" />
+                    <span asp-validation-for="Calisma" class="text-danger"></span>
+                </div>
+
+                <!--<div class="mb-3">
+                     <label asp-for="Fiyat" class="p-0"></label>
+                     <input asp-for="Fiyat" class="form-control" />
+                     <span asp-validation-for="Fiyat" class="text-danger"></span>
+                 </div> -->
+
+                <div class="mb-3">
+                    <label asp-for="ResimUrl" class="p-0"></label>
+                    <input type="file" name="file" class="form-control" />
+                </div>
+
+
+                @if (Model != null)
+                {
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Doktor Güncelle</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Doktor Ekle</button>
+                }
+
+
+                <a asp-controller="Doktor" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
+                    Doktor Listesine Geri Dön
+                </a>
+
+            </div>
+        </div>
+        <div class="col-2">
+            @if (Model != null)
+            {
+                <br>
+
+                <br />
+                <img src="@Model.ResimUrl" width="100%" style="border-radius: 7px; border: 4px solid:#bbb9b9" />
+            }
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+</form>
+
+@*@section Scripts{
+    @{
+
+        <partial name="_ValidationScriptsPartial"/>
+
+    }
+     *@
+
+<!-- buradaki razor section kısmı, modelde verilen hata mesajının, front endde de sağlamasını yapmak içindir. -->

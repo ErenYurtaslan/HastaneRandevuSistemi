@@ -1,0 +1,71 @@
+﻿@model List<DoktorBrans>
+
+@{
+    ViewData["Title"] = "Doktor Branşları";
+}
+
+@if (TempData["basarili"] != null){
+    <h2 style="color:forestgreen">@TempData["basarili"]</h2>
+}
+
+<div class="container">
+    <div class="row pt-3 pb-4">
+        <div>
+            <h1 class="text-primary">Doktor Branşları</h1>
+        </div>
+    </div>
+    <table class="table table-bordered">
+
+        <thead>
+
+
+            <tr>
+                <th class="text-primary">
+                    id
+                </th>
+
+                <th class="text-primary">
+                    Doktor Branşları
+                </th>
+
+                <th class="text-succcess">
+                    Güncelle
+                </th>
+
+                <th class="text-danger">
+                    Sil
+                </th>
+            </tr>
+
+
+        </thead>
+
+
+        <tbody>
+            @foreach (var doktorBranslari in Model)
+            {
+
+
+                <tr>
+                    <td>@doktorBranslari.Id</td>
+                    <td>@doktorBranslari.Ad</td>
+                    <td>
+                        <a asp-controller="DoktorBrans" asp-action="Guncelle" asp-route-id="@doktorBranslari.Id" type="button" class="btn btn-success btn-sm">Güncelle</a>
+                    </td>
+                    <td>
+                        <a asp-controller="DoktorBrans" asp-action="Sil" asp-route-id="@doktorBranslari.Id" type="button" class="btn btn-danger btn-sm">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+    <div class="row pt-3 pb-2">
+        <div>
+            <a asp-controller="DoktorBrans" asp-action="Ekle" class="btn btn-lg btn-primary" type="button">Yeni Branş Ekle</a>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,75 @@
+﻿@model Randevu
+
+@{
+    ViewData["Title"] = Model == null ? "Randevu Al" : " Randevu Güncelle";
+}
+
+<form method="post" enctype="multipart/form-data">
+
+    <div class="row">
+        <div class="col-10">
+            <div class="border p-3 mt-5">
+
+                <div class="row pb-3">
+                    <h2 class="text-primary">@(Model == null ? "Randevu Al" : "Randevuyu Güncelle")</h2>
+                    <br>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="HastaId" class="p-0"></label>
+                    <input asp-for="HastaId" class="form-control" />
+                    <span asp-validation-for="HastaId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DoktorId" class="p-0"></label>
+                    <select asp-for="DoktorId" asp-items="ViewBag.DoktorList" class="form-select"></select>
+                    <span asp-validation-for="DoktorId" class="text-danger"></span>
+                </div>
+
+
+                @if (Model != null)
+                {
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Randevuyu Güncelle</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Yeni Randevu</button>
+                }
+
+
+                <a asp-controller="Randevu" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
+                    Randevulara Geri Dön
+                </a>
+
+            </div>
+        </div>
+        <div class="col-2">
+            @if (Model != null)
+            {
+                <br>
+
+                <br />
+                <img src="@Model.Doktor.ResimUrl" width="100%" style="border-radius:7px; border: 4px solid ^bbb9b9" />
+            }
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</form>
+
+@*@section Scripts{
+    @{
+
+        <partial name="_ValidationScriptsPartial"/>
+
+    }
+     *@
+
+<!-- buradaki razor section kısmı, modelde verilen hata mesajının, front endde de sağlamasını yapmak içindir. -->

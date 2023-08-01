@@ -1,0 +1,62 @@
+﻿@model Doktor
+
+@{
+    ViewData["Title"] = "Doktor Sil";
+}
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <!--
+        eğer modeldeki metodun adı Id yerine bambaşka bir şey olsaydı, bu satırı yazmayınca program hata verirdi.(şu an örnek olsun diye yazıldı)
+        Çünkü buradaki "Id" ismi asp için özel bir isim ve bu ismi koyduğun an bunun databasedeki "id" kavramına eşdeğer olduğunu sistem otomatik olarak algılıyor.
+    -->
+    <div class="border p-3 mt-5">
+
+        <div class="row pb-3">
+            <h2 class="text-primary">Doktor Sil</h2>
+            </hr>
+        </div>
+
+
+        <div class="mb-3">
+            <label asp-for="DoktorAdi" class="p-0"></label>
+            <input asp-for="DoktorAdi" disabled class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Poliklinik" class="p-0"></label>
+            <input asp-for="Poliklinik" disabled class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Calisma" class="p-0"></label>
+            <input asp-for="Calisma" disabled class="form-control" />
+        </div>
+
+       <!--
+            <div class="mb-3">
+             <label asp-for="Fiyat" class="p-0"></label>
+             <input asp-for="Fiyat" disabled class="form-control" />
+         </div>
+
+       --> 
+
+
+        <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Doktoru Sil</button>
+
+        <a asp-controller="Doktor" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
+            Doktor Listesine Geri Dön
+        </a>
+
+    </div>
+</form>
+
+@*@section Scripts{
+    @{
+
+        <partial name="_ValidationScriptsPartial"/>
+
+    }
+     *@
+
+<!-- buradaki razor section kısmı, modelde verilen hata mesajının, front endde de sağlamasını yapmak içindir. -->

@@ -1,0 +1,128 @@
+﻿@using HastaneRandevuSistemi.Utility;
+@model List<Doktor>
+
+@{
+    ViewData["Title"] = "Doktorlar";
+}
+@if (TempData["basarili"] != null)
+{
+    <h2 style="color:forestgreen">@TempData["basarili"]</h2>
+}
+
+<div class="container">
+    <div class="row pt-3 pb-4">
+        <div>
+            <h1 class="text-primary">Doktorlar</h1>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+
+        <thead>
+
+
+            <tr>
+
+                <th class="text-primary">
+                    Doktorlar
+                </th>
+
+                @if (User.IsInRole(UserRoles.Role_Admin))
+                {
+                    <th class="text-primary">
+                        id
+                    </th>
+                }
+                <th class="text-primary">
+                    Doktor Adı
+                </th>
+
+                <th class="text-primary">
+                    Poliklinik
+                </th>
+
+                <th class="text-primary">
+                    Çalışma Gün ve Saatleri
+                </th>
+
+                <th class="text-primary">
+                    Branşı
+                </th>
+                @if (User.IsInRole(UserRoles.Role_Hasta))
+                {
+                    <th class="text-primary">
+                        Randevu Al
+                    </th>
+                }
+
+                @if (User.IsInRole(UserRoles.Role_Admin))
+                {
+                    <th style="color:forestgreen">
+                        Güncelle
+                    </th>
+
+                    <th class="text-danger">
+                        Sil
+                    </th>
+                }
+
+            </tr>
+
+
+        </thead>
+
+
+        <tbody>
+            @foreach (var doktor in Model)
+            {
+
+
+                <tr>
+                    <td align="center" valign="middle">
+                        <img src="@doktor.ResimUrl"
+                             style="border-radius:7px; border:3px solid #bbb9b9;
+                               max-width:145px; max:275px;" />
+                    </td>
+                    @if (User.IsInRole(UserRoles.Role_Admin))
+                    {
+                        <td>@doktor.Id</td>
+                    }
+                    <td align="center" valign="middle">@doktor.DoktorAdi</td>
+                    <td align="center" valign="middle">@doktor.Poliklinik</td>
+                    <td align="center" valign="middle">@doktor.Calisma</td>
+                    <td align="center" valign="middle">@doktor.DoktorBrans?.Ad</td>
+                    @if (User.IsInRole(UserRoles.Role_Hasta))
+                    {
+                        <td align="center" valign="middle">
+                            <a asp-controller="Randevu" asp-action="RandevuAl" asp-route-id="@doktor.Id" type="button" class="btn btn-success btn-sm">Randevu Al</a>
+                        </td>
+                    }
+
+                    @if (User.IsInRole(UserRoles.Role_Admin))
+                    {
+                        <td align="center" valign="middle">
+                            <a asp-controller="Doktor" asp-action="EkleGuncelle" asp-route-id="@doktor.Id" type="button" class="btn btn-success btn-sm">Güncelle</a>
+                        </td>
+                        <td align="center" valign="middle">
+                            <a asp-controller="Doktor" asp-action="Sil" asp-route-id="@doktor.Id" type="button" class="btn btn-danger btn-sm">Sil</a>
+                        </td>
+                    }
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+    @if (User.IsInRole(UserRoles.Role_Admin))
+    {
+        <div class="row pt-3 pb-2">
+            <div>
+                <a asp-controller="Doktor" asp-action="EkleGuncelle" class="btn btn-lg btn-primary" type="button">Yeni Doktor Kaydı Oluştur</a>
+            </div>
+        </div>
+     }
+
+
+
+</div>
