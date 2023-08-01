@@ -16,13 +16,13 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>/*iþin içine roller gi
 
 builder.Services.AddRazorPages();//login adminle alakalı parçalardan biri
 
-//_kitapTuruRepository nesnesi => Dependency Injection
+//_doktorBransRepository nesnesi => Dependency Injection
 builder.Services.AddScoped<IDoktorBransRepository, DoktorBransRepository>();
 
-//_kitapRepository nesnesi => Dependency Injection
+//_doktorRepository nesnesi => Dependency Injection
 builder.Services.AddScoped<IDoktorRepository, DoktorRepository>();
 
-//_kiralamapRepository nesnesi => Dependency Injection
+//_randevupRepository nesnesi => Dependency Injection
 builder.Services.AddScoped<IRandevuRepository, RandevuRepository>();
 
 // DÖNÜLECEK builder.Services.AddScoped<IEmailSender, EmailSender>();
