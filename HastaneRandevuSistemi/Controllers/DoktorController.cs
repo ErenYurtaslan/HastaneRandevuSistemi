@@ -29,7 +29,7 @@ namespace HastaneRandevuSistemi.Controllers
         [Authorize(Roles = "Admin , Hasta")]
         public IActionResult Index()
         {
-           
+
 
             List<Doktor> objDoktorList = _doktorRepository.GetAll(includeProps: "DoktorBrans").ToList();
 
@@ -41,7 +41,7 @@ namespace HastaneRandevuSistemi.Controllers
         [Authorize(Roles = UserRoles.Role_Admin)]
         public IActionResult EkleGuncelle(int? id)
         {
-            
+
 
             IEnumerable<SelectListItem> DoktorBransList = _doktorBransRepository.GetAll().
                 Select(
@@ -62,7 +62,7 @@ namespace HastaneRandevuSistemi.Controllers
             else
             {//güncelle
 
-                
+
 
                 Doktor? doktorDb = _doktorRepository.Get(u => u.Id == id);//Expression<Func<T, bool>> filtre kısmı
 
@@ -197,7 +197,8 @@ namespace HastaneRandevuSistemi.Controllers
                 _doktorRepository.Kaydet();
                 TempData["basarili"] = "Doktor kayıt silme işlemi başarılı!";
                 return RedirectToAction("Index", "Doktor");
-        }
+            }
 
+        }
     }
 }

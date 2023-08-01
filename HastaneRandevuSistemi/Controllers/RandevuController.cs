@@ -86,8 +86,6 @@ namespace HastaneRandevuSistemi.Controllers
             {
 
 
-
-
                 if (randevu.Id == 0)
                 {
                     _randevuRepository.Ekle(randevu);
