@@ -1,0 +1,349 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\HastaneRandevuSistemi.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HastaneRandevuSistemi.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\alara.jpg",
+      "PackagePath": "staticwebassets\\img\\alara.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\dilek.jpg",
+      "PackagePath": "staticwebassets\\img\\dilek.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\dwayne.jpg",
+      "PackagePath": "staticwebassets\\img\\dwayne.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\eren.jpg",
+      "PackagePath": "staticwebassets\\img\\eren.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\ersan.jpg",
+      "PackagePath": "staticwebassets\\img\\ersan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\ertugrul.jpg",
+      "PackagePath": "staticwebassets\\img\\ertugrul.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\feyza.jpg",
+      "PackagePath": "staticwebassets\\img\\feyza.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\hakan.jpg",
+      "PackagePath": "staticwebassets\\img\\hakan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\harun.jpg",
+      "PackagePath": "staticwebassets\\img\\harun.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\hastane.jpg",
+      "PackagePath": "staticwebassets\\img\\hastane.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\ilayda.jpg",
+      "PackagePath": "staticwebassets\\img\\ilayda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\naciye.jpg",
+      "PackagePath": "staticwebassets\\img\\naciye.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\ogeday.jpg",
+      "PackagePath": "staticwebassets\\img\\ogeday.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\omer.jpg",
+      "PackagePath": "staticwebassets\\img\\omer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\onur.jpg",
+      "PackagePath": "staticwebassets\\img\\onur.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\sancar.jpg",
+      "PackagePath": "staticwebassets\\img\\sancar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\tahir.jpg",
+      "PackagePath": "staticwebassets\\img\\tahir.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\taner.jpg",
+      "PackagePath": "staticwebassets\\img\\taner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\tarik.jpg",
+      "PackagePath": "staticwebassets\\img\\tarik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\thomas.jpg",
+      "PackagePath": "staticwebassets\\img\\thomas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\img\\zeliha.jpg",
+      "PackagePath": "staticwebassets\\img\\zeliha.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Eren Yurtaslan\\source\\repos\\HastaneRandevuSistemi\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.HastaneRandevuSistemi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.HastaneRandevuSistemi.props",
+      "PackagePath": "build\\HastaneRandevuSistemi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.HastaneRandevuSistemi.props",
+      "PackagePath": "buildMultiTargeting\\HastaneRandevuSistemi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.HastaneRandevuSistemi.props",
+      "PackagePath": "buildTransitive\\HastaneRandevuSistemi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
