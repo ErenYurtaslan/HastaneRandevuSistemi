@@ -157,7 +157,7 @@ namespace HastaneRandevuSistemi.Controllers
                
                     
 
-               // _randevuRepository.Kaydet();//bunu yapmazsan db'ye bilgiler eklenmez.
+                _randevuRepository.Kaydet();//bunu yapmazsan db'ye bilgiler eklenmez.
 
 
 
