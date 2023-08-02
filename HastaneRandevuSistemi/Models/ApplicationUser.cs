@@ -10,9 +10,6 @@ namespace HastaneRandevuSistemi.Models
 
         public string? Adres { get; set; }
 
-       /* public string? Fakulte { get; set; }
-
-        public string? Bolum { get; set; }*/
-
+       
     }
 }
