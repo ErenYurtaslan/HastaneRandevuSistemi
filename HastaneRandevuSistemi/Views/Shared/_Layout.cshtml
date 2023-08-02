@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using HastaneRandevuSistemi.Utility;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Hastane Randevu Sistemi</title>
+    <title>@ViewData["Title"] - HastaneRandevuSistemi.com</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/HastaneRandevuSistemi.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HastaneRandevuWebProgramlama.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -25,13 +26,34 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Bize Ulaşın</a>
                         </li>
+
+
+                        @if (User.IsInRole(UserRoles.Role_Admin))
+                        {                      
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="DoktorBrans" asp-action="Index">Branşlar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Doktor" asp-action="Index">Doktorlar</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Randevu" asp-action="Index">Randevu İşlemleri</a>
+                        </li>
+                        }
+
+                         @if (User.IsInRole(UserRoles.Role_Hasta))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Doktor" asp-action="Index">Doktor Listesi</a>
+                            </li>
+                        }
+
+
                     </ul>
+
+                    <partial name="_LoginPartial"/>
+
+
                 </div>
             </div>
         </nav>
@@ -44,7 +66,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - HastaneRandevuSistemi - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Hastane Randevu Web Programlama - <a asp-area="" asp-controller="Home" asp-action="Privacy">İletişim</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

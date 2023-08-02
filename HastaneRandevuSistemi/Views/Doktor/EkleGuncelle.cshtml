@@ -12,7 +12,7 @@
     -->
 
     <div class="row">
-        <!--row görünümü verdik, 12 birimlik satırın 10 birimi tablonun, 2 birimi kitap görselinin olacak-->
+        
         <div class="col-10">
             <div class="border p-3 mt-5">
 
@@ -29,7 +29,7 @@
 
                 <div class="mb-3">
                     <label asp-for="DoktorBransId" class="p-0"></label>
-                    <select asp-for="DoktorBransId" asp-items="ViewBag.DoktorBransList" class="form-select"></select><!--burada db'den gelen tüm kitap türleri gelecek, istediğimizi seçeceğiz.-->
+                    <select asp-for="DoktorBransId" asp-items="ViewBag.DoktorBransList" class="form-select"></select>
                     <span asp-validation-for="DoktorBransId" class="text-danger"></span>
                 </div>
 
