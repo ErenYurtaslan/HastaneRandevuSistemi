@@ -150,8 +150,9 @@ namespace HastaneRandevuSistemi.Controllers
             if (ModelState.IsValid)
             {
 
+                randevu.Id = 0;
 
-                
+
                _randevuRepository.Ekle(randevu);
                 TempData["basarili1"] = "Yeni randevu alındı!";
                
