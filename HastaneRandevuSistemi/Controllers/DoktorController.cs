@@ -26,7 +26,7 @@ namespace HastaneRandevuSistemi.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        [Authorize(Roles = "Admin , Hasta")]
+       [Authorize(Roles = "Admin , Hasta")]
         public IActionResult Index()
         {
 
@@ -38,7 +38,7 @@ namespace HastaneRandevuSistemi.Controllers
 
 
 
-        [Authorize(Roles = UserRoles.Role_Admin)]
+       [Authorize(Roles = UserRoles.Role_Admin)]
         public IActionResult EkleGuncelle(int? id)
         {
 
