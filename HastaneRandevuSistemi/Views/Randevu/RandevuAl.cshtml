@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="DoktorId" class="p-0"></label>
+                    <label asp-for="DoktorId" class="p-0">Doktor Adı</label>
                     <select asp-for="DoktorId" asp-items="ViewBag.DoktorList" class="form-select"></select>
                     <span asp-validation-for="DoktorId" class="text-danger"></span>
                 </div>
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="col-2">
-            @if (Model != null)
+          @if (Model != null)
             {
                 <br>
 
