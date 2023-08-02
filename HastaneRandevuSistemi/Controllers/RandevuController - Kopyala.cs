@@ -7,8 +7,8 @@ using System.Data;
 
 namespace HastaneRandevuSistemi.Controllers
 {
-    //[Authorize(Roles = UserRoles.Role_Admin)] bütün controller dosyasında auth istersen buraya,
-    //spesifik actionlar için istersen aşağıda istediğin metodun başına bunu yazıyorsun 
+    [Authorize(Roles = UserRoles.Role_Admin)]//bütün controller dosyasında auth istersen buraya,
+                                             //spesifik actionlar için istersen aşağıda istediğin metodun başına bunu yazıyorsun 
     public class RandevuController : Controller
     {
 
@@ -23,7 +23,7 @@ namespace HastaneRandevuSistemi.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        [Authorize(Roles = UserRoles.Role_Admin)]
+
         public IActionResult Index()
         {
             
@@ -35,7 +35,7 @@ namespace HastaneRandevuSistemi.Controllers
 
 
 
-        [Authorize(Roles = UserRoles.Role_Admin)]
+
         public IActionResult EkleGuncelle(int? id)
         {
            
@@ -77,7 +77,7 @@ namespace HastaneRandevuSistemi.Controllers
 
 
 
-        [Authorize(Roles = UserRoles.Role_Admin)]
+
         [HttpPost]//bunu yazmazsan yukarıda aynı isimle action olduğu için "catch" çalışır, sayfayı göremezsin.
         public IActionResult EkleGuncelle(Randevu randevu)
         {
@@ -116,67 +116,11 @@ namespace HastaneRandevuSistemi.Controllers
 
 
 
-        [Authorize(Roles = UserRoles.Role_Hasta)]
-        public IActionResult RandevuAl(int? id)
-        {
-
-            IEnumerable<SelectListItem> DoktorList = _doktorRepository.GetAll().
-                Select(
-                k => new SelectListItem
-                {
-                    Text = k.DoktorAdi,
-                    Value = k.Id.ToString(),
-                }
-               );
-
-            ViewBag.DoktorList = DoktorList;
-
-
-           // if (id == null || id == 0)//ekle
-            //{
-
-                return View();
-
-           // }
-           
-        }
-
-
-        [Authorize(Roles = UserRoles.Role_Hasta)]
-        [HttpPost]//bunu yazmazsan yukarıda aynı isimle action olduğu için "catch" çalışır, sayfayı göremezsin.
-        public IActionResult RandevuAl(Randevu randevu)
-        {
-
-            if (ModelState.IsValid)
-            {
-
-
-                
-               _randevuRepository.Ekle(randevu);
-                TempData["basarili1"] = "Yeni randevu alındı!";
-               
-                    
-
-               // _randevuRepository.Kaydet();//bunu yapmazsan db'ye bilgiler eklenmez.
-
-
-
-                return RedirectToAction("Index", "Doktor");
-            }
-            else
-            {
-                return View();
-            }
-
-
-        }
 
 
 
 
 
-
-        [Authorize(Roles = UserRoles.Role_Admin)]
         public IActionResult Sil(int? id)
         {
 
@@ -227,7 +171,7 @@ namespace HastaneRandevuSistemi.Controllers
 
 
 
-        [Authorize(Roles = UserRoles.Role_Admin)]
+
         [HttpPost, ActionName("Sil")]//bunu yazmazsan yukarıda aynı isimle action olduğu için "catch" çalışır, sayfayı göremezsin.
         public IActionResult SilPOST(int? id)
         {
