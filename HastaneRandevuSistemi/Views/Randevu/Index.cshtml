@@ -1,4 +1,5 @@
-﻿@model List<Randevu>
+﻿@using HastaneRandevuSistemi.Utility;
+@model List<Randevu>
 @{
     ViewData["Title"] = "Randevu İşlemleri";
 }
@@ -19,25 +20,30 @@
 
 
             <tr>
-                <th class="text-primary">
-                    id
-                </th>
-
+                
+                    <th class="text-primary">
+                        id
+                    </th>
+                
                 <th class="text-primary">
                     Hasta id
-                </th>
+                    </th>
+                
 
                 <th class="text-primary">
                     Doktor Adı
                 </th>
+               
+                    <th style="color:forestgreen">
+                        Güncelle
+                    </th>
 
-                <th style="color:forestgreen">
-                    Güncelle
-                </th>
+                    <th class="text-danger">
+                        Sil
+                    </th>
+                
+               
 
-                <th class="text-danger">
-                    Sil
-                </th>
             </tr>
 
 
@@ -50,27 +56,34 @@
 
 
                 <tr>
-                    <td>@randevu.Id</td>
-                    <td>@randevu.HastaId</td>
+                   
+                        <td>@randevu.Id</td>
+                        <td>@randevu.HastaId</td>
+                    
+                    
                     <!-- <td>@*@randevu.DoktorId*@</td>-->
                     <td>@randevu.Doktor.DoktorAdi</td>
-                    <td>
-                        <a asp-controller="Randevu" asp-action="EkleGuncelle" asp-route-id="@randevu.Id" type="button" class="btn btn-success btn-sm">Güncelle</a>
-                    </td>
-                    <td>
-                        <a asp-controller="Randevu" asp-action="Sil" asp-route-id="@randevu.Id" type="button" class="btn btn-danger btn-sm">Sil</a>
-                    </td>
+
+                   
+                        <td>
+                            <a asp-controller="Randevu" asp-action="EkleGuncelle" asp-route-id="@randevu.Id" type="button" class="btn btn-success btn-sm">Güncelle</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Randevu" asp-action="Sil" asp-route-id="@randevu.Id" type="button" class="btn btn-danger btn-sm">Sil</a>
+                        </td>
+                                   
+                    
                 </tr>
             }
         </tbody>
 
     </table>
-
-    <div class="row pt-3 pb-2">
-        <div>
-            <a asp-controller="Randevu" asp-action="EkleGuncelle" class="btn btn-lg btn-primary" type="button">Yeni Randevu Kaydı Oluştur</a>
+  
+        <div class="row pt-3 pb-2">
+            <div>
+                <a asp-controller="Randevu" asp-action="EkleGuncelle" class="btn btn-lg btn-primary" type="button">Yeni Randevu Kaydı Oluştur</a>
+            </div>
         </div>
-    </div>
-
+  
 
 </div>

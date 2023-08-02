@@ -4,9 +4,22 @@
 @{
     ViewData["Title"] = "Doktorlar";
 }
-@if (TempData["basarili"] != null)
+
+@if (User.IsInRole(UserRoles.Role_Admin))
 {
-    <h2 style="color:forestgreen">@TempData["basarili"]</h2>
+    if (TempData["basarili"] != null)
+    {
+        <h2 style="color:forestgreen">@TempData["basarili"]</h2>
+    }
+
+}
+
+@if (User.IsInRole(UserRoles.Role_Hasta))
+{
+    if (TempData["basarili1"] != null)
+    {
+        <h2 style="color:forestgreen">@TempData["basarili1"]</h2>
+    }
 }
 
 <div class="container">

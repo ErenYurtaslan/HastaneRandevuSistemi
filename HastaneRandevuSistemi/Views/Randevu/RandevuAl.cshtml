@@ -1,8 +1,9 @@
 ﻿@model Randevu
 
 @{
-    ViewData["Title"] = Model == null ? "Randevu Oluştur" : " Randevu Güncelle";
+    ViewData["Title"] = "Randevu Al";
 }
+
 
 <form method="post" enctype="multipart/form-data">
 
@@ -11,7 +12,7 @@
             <div class="border p-3 mt-5">
 
                 <div class="row pb-3">
-                    <h2 class="text-primary">@(Model == null ? "Randevu Oluştur" : "Randevuyu Güncelle")</h2>
+                    <h2 class="text-primary">Randevu Al</h2>
                     <br>
                 </div>
 
@@ -28,18 +29,13 @@
                 </div>
 
 
-                @if (Model != null)
-                {
-                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Randevuyu Güncelle</button>
-                }
-                else
-                {
-                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Yeni Randevu Oluştur</button>
-                }
+               
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Randevuyu Al</button>
+               
+                
 
-
-                <a asp-controller="Randevu" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
-                    Randevulara Geri Dön
+                <a asp-controller="Doktor" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
+                    Doktor Listesine Geri Dön
                 </a>
 
             </div>
@@ -63,13 +59,3 @@
 
 
 </form>
-
-@*@section Scripts{
-    @{
-
-        <partial name="_ValidationScriptsPartial"/>
-
-    }
-     *@
-
-<!-- buradaki razor section kısmı, modelde verilen hata mesajının, front endde de sağlamasını yapmak içindir. -->
