@@ -75,7 +75,7 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required (ErrorMessage ="Bu alan zorunludur.")]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -84,10 +84,10 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required(ErrorMessage = "Bu alan zorunludur.")]
+            [StringLength(100, ErrorMessage = "{0}, en az {2} ve en fazla {1} karakter uzunluğunda olmalıdır.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Şifre")]
             public string Password { get; set; }
 
             /// <summary>
@@ -95,11 +95,11 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Display(Name = "Şifreyi Onaylayın")]
+            [Compare("Password", ErrorMessage = "Şifre ve onay şifresi uyuşmuyor.")]
             public string ConfirmPassword { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Bu alan zorunludur.")]
             public int HastaNo { get; set; }
 
             public string? Adres { get; set; }
@@ -143,7 +143,7 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
+                    _logger.LogInformation("Kullanıcı şifre ile yeni bir hesap oluşturdu.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -155,7 +155,7 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        $"Lütfen <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>buraya tıklayarak </a> hesabınızı onaylayın.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
@@ -185,9 +185,9 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
-                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
-                    $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
+                throw new InvalidOperationException($"Bunun bir örneği oluşturulamıyor '{nameof(IdentityUser)}'. " +
+                    $" '{nameof(IdentityUser)}' öğesinin soyut bir sınıf olmadığından ve parametresiz bir oluşturucuya sahip olduğundan emin olun veya alternatif olarak " +
+                    $"/Areas/Identity/Pages/Account/Register.cshtml içindeki kayıt sayfasını geçersiz kıl");
             }
         }
 
@@ -195,7 +195,7 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
         {
             if (!_userManager.SupportsUserEmail)
             {
-                throw new NotSupportedException("The default UI requires a user store with email support.");
+                throw new NotSupportedException("Varsayılan kullanıcı arabirimi, e-posta desteği olan bir kullanıcı deposu gerektirir.");
             }
             return (IUserEmailStore<IdentityUser>)_userStore;
         }
