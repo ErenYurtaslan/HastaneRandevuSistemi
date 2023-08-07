@@ -12,7 +12,7 @@ namespace HastaneRandevuSistemi.Models
 
 
         [Required]
-        [DisplayName("Dotor Adı-Soyadı:")]
+        [DisplayName("Doktor Adı-Soyadı:")]
         public required string DoktorAdi { get; set; }
 
 
