@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Admin Adresi" xml:space="preserve">
+    <value>Admin Address</value>
+  </data>
+  <data name="Adres" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Anasayfa" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Beni Hatırla?" xml:space="preserve">
+    <value>Remember me?</value>
+  </data>
+  <data name="Bize Ulaşın" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Branş" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="Branş Adı" xml:space="preserve">
+    <value>Branch Name</value>
+  </data>
+  <data name="Branş Adını Güncelle" xml:space="preserve">
+    <value>Update Branch Name</value>
+  </data>
+  <data name="Branş Listesine Geri Dön" xml:space="preserve">
+    <value>Back to the Branch List</value>
+  </data>
+  <data name="Branşlar" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+  <data name="Branşı" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="Branşı:" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="Bu alan zorunludur." xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+  <data name="Bu uygulamanın şu anda kayıtlı gerçek bir e-posta göndericisi yok, gerçek bir e-posta göndericisinin nasıl yapılandırılacağını öğrenmek için bu belgelere bakın." xml:space="preserve">
+    <value>This app currently has no real email senders registered, check this documentation to learn how to configure a real email sender.</value>
+  </data>
+  <data name="Diller" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="Doktor Adı" xml:space="preserve">
+    <value>Doctor Name</value>
+  </data>
+  <data name="Doktor Adı:" xml:space="preserve">
+    <value>Doctor Name:</value>
+  </data>
+  <data name="Doktor Branşları" xml:space="preserve">
+    <value>Doctor's Branches</value>
+  </data>
+  <data name="Doktor Branşı ekleme işlemi başarılı!" xml:space="preserve">
+    <value>Adding Doctor branch is successful!</value>
+  </data>
+  <data name="Doktor Branşı güncelleme işlemi başarılı!" xml:space="preserve">
+    <value>Doctor Branch update is successful!</value>
+  </data>
+  <data name="Doktor Branşı silme işlemi başarılı!" xml:space="preserve">
+    <value>Doctor Branch deletion is successful!</value>
+  </data>
+  <data name="Doktor Branşını Sil" xml:space="preserve">
+    <value>Delete Doctor Branch</value>
+  </data>
+  <data name="Doktor Ekle" xml:space="preserve">
+    <value>Add Doctor</value>
+  </data>
+  <data name="Doktor Güncelle" xml:space="preserve">
+    <value>Update Doctor</value>
+  </data>
+  <data name="Doktor kayıt ekleme işlemi başarılı!" xml:space="preserve">
+    <value>Add doctor save is successful!</value>
+  </data>
+  <data name="Doktor kayıt güncelleme işlemi başarılı!" xml:space="preserve">
+    <value>Doctor record update is successful!</value>
+  </data>
+  <data name="Doktor kayıt silme işlemi başarılı!" xml:space="preserve">
+    <value>Doctor record deletion is successful!</value>
+  </data>
+  <data name="Doktor Listesi" xml:space="preserve">
+    <value>Doctor List</value>
+  </data>
+  <data name="Doktor Listesine Geri Dön" xml:space="preserve">
+    <value>Back to the Doctor List</value>
+  </data>
+  <data name="Doktor Sil" xml:space="preserve">
+    <value>Delete Doctor</value>
+  </data>
+  <data name="Doktorlar" xml:space="preserve">
+    <value>Doctors</value>
+  </data>
+  <data name="Doktoru Güncelle" xml:space="preserve">
+    <value>Update Doctor</value>
+  </data>
+  <data name="Doktoru Sil" xml:space="preserve">
+    <value>Delete Doctor</value>
+  </data>
+  <data name="E-Posta" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="E-posta onayını yeniden gönder" xml:space="preserve">
+    <value>Resend email confirmation</value>
+  </data>
+  <data name="E-posta onayını yeniden gönderin." xml:space="preserve">
+    <value>Resend the email confirmation.</value>
+  </data>
+  <data name="E-postanızı giriniz." xml:space="preserve">
+    <value>Enter your e-mail.</value>
+  </data>
+  <data name="Giriş Yap" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Güncelle" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Harici hizmetler aracılığıyla oturum açmayı desteklemek için bu ASP.NET uygulamasını ayarlama hakkında bu makaleye bakın:" xml:space="preserve">
+    <value>See this article about setting up this ASP.NET application to support login via external services:</value>
+  </data>
+  <data name="Hasta id" xml:space="preserve">
+    <value>Patient id</value>
+  </data>
+  <data name="Hasta Numarası" xml:space="preserve">
+    <value>Patient Number</value>
+  </data>
+  <data name="HastaId" xml:space="preserve">
+    <value>PatientId</value>
+  </data>
+  <data name="Hastane Randevu Sistemi" xml:space="preserve">
+    <value>The Hospital Appointment Site</value>
+  </data>
+  <data name="Hastane Randevu Sitesine Hoş Geldiniz!" xml:space="preserve">
+    <value>Welcome to the Hospital Appointment Site!</value>
+  </data>
+  <data name="Hastane Randevu Web Programlama" xml:space="preserve">
+    <value>The Hospital Appointment Web Programming</value>
+  </data>
+  <data name="Hesabınızı onaylamak için lütfen e-postanızı kontrol edin." xml:space="preserve">
+    <value>Please check your email to confirm your account.</value>
+  </data>
+  <data name="Hüsnügören Mahallesi, Azizağalar Yerleşkesi, No:79 Feraye Apt., İç Kapı No:3, Kat:2" xml:space="preserve">
+    <value>Hüsnügören District, Azizağalar Campus, No:79 Feraye Apt., Inner Door No:3, Floor:2</value>
+  </data>
+  <data name="Kaydol" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Kaydolmak için başka bir hizmet kullanın." xml:space="preserve">
+    <value>Use another service to register.</value>
+  </data>
+  <data name="Kayıt Onayı" xml:space="preserve">
+    <value>Registration Confirmation</value>
+  </data>
+  <data name="Merhaba" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="Normalde bu e-postayla gönderilir: Hesabınızı onaylamak için burayı tıklayın:" xml:space="preserve">
+    <value>Normally this is sent by email: Click here to confirm your account:</value>
+  </data>
+  <data name="Online Randevu Sistemi" xml:space="preserve">
+    <value>Online Appointment System</value>
+  </data>
+  <data name="Oturum açmak için başka bir hizmet kullanın." xml:space="preserve">
+    <value>Use another service to log in.</value>
+  </data>
+  <data name="Oturum açmak için yerel bir hesap kullanın." xml:space="preserve">
+    <value>Use a local account to log in.</value>
+  </data>
+  <data name="Poliklinik" xml:space="preserve">
+    <value>Policlinic</value>
+  </data>
+  <data name="Poliklinik:" xml:space="preserve">
+    <value>Policlinic:</value>
+  </data>
+  <data name="Randevu Al" xml:space="preserve">
+    <value>Make an Appointment</value>
+  </data>
+  <data name="Randevu güncellendi!" xml:space="preserve">
+    <value>Appointment updated!</value>
+  </data>
+  <data name="Randevu Kaydını Sil" xml:space="preserve">
+    <value>Delete Appointment Record</value>
+  </data>
+  <data name="Randevu Oluştur" xml:space="preserve">
+    <value>Create an Appointment</value>
+  </data>
+  <data name="Randevu silindi!" xml:space="preserve">
+    <value>Appointment deleted!</value>
+  </data>
+  <data name="Randevu İşlemleri" xml:space="preserve">
+    <value>Appointment Procedures</value>
+  </data>
+  <data name="Randevulara Geri Dön" xml:space="preserve">
+    <value>Back to Appointments</value>
+  </data>
+  <data name="Randevuyu Güncelle" xml:space="preserve">
+    <value>Update Appointment</value>
+  </data>
+  <data name="Resim Yükle:" xml:space="preserve">
+    <value>Upload a photograph:</value>
+  </data>
+  <data name="Shire/Orta Dünya" xml:space="preserve">
+    <value>Shire/Middle Earth</value>
+  </data>
+  <data name="Sil" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Yapılandırılmış harici kimlik doğrulama hizmeti yok." xml:space="preserve">
+    <value>There is no external authentication service configured.</value>
+  </data>
+  <data name="Yapılandırılmış harici kimlik doğrulama hizmeti yok.Harici hizmetler aracılığıyla oturum açmayı desteklemek için bu ASP.NET uygulamasını ayarlama hakkında bu makaleye bakın:" xml:space="preserve">
+    <value>No external authentication service configured. See this article about setting up this ASP.NET application to support login via external services:</value>
+  </data>
+  <data name="Yeni bir hesap oluşturun." xml:space="preserve">
+    <value>Create a new account.</value>
+  </data>
+  <data name="Yeni bir kullanıcı olarak kaydolun." xml:space="preserve">
+    <value>Register as a new user.</value>
+  </data>
+  <data name="Yeni Branş Ekle" xml:space="preserve">
+    <value>Add New Branch</value>
+  </data>
+  <data name="Yeni Doktor Branşını Ekle" xml:space="preserve">
+    <value>Add New Doctor Branch</value>
+  </data>
+  <data name="Yeni Doktor Kaydı Oluştur" xml:space="preserve">
+    <value>Create New Doctor Record</value>
+  </data>
+  <data name="Yeni randevu alındı!" xml:space="preserve">
+    <value>New appointment made!</value>
+  </data>
+  <data name="Yeni randevu kaydedildi!" xml:space="preserve">
+    <value>New appointment saved!</value>
+  </data>
+  <data name="Yeni Randevu Oluştur" xml:space="preserve">
+    <value>Create New Appointment</value>
+  </data>
+  <data name="Yeniden Gönder" xml:space="preserve">
+    <value>Send again</value>
+  </data>
+  <data name="Çalışma Gün ve Saatleri" xml:space="preserve">
+    <value>Working Days and Hours</value>
+  </data>
+  <data name="Çalışma Günleri-Saatleri:" xml:space="preserve">
+    <value>Working Days-Hours:</value>
+  </data>
+  <data name="Çıkış Yap" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="İletişim" xml:space="preserve">
+    <value>Communication</value>
+  </data>
+  <data name="İletişim Bilgileri:" xml:space="preserve">
+    <value>Contact Information:</value>
+  </data>
+  <data name="Şifre" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Şifrenizi mi unuttunuz?" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="Şifreyi Onaylayın" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Şifreyi Yenile" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+</root>
