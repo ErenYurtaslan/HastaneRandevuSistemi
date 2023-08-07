@@ -13,45 +13,70 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hastane Randevu Sistemi</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("Hastane Randevu Sistemi").Value</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                        <li>
+                            <div classs="dropdown">
+                                <button type="button" class="btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                    @_localization.Getkey("Diller").Value
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="en-US"
+                                           class="dropdown-item">
+                                            <i class="flag-icon flag-icon-gb"></i> English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        </a>
+                                        <a asp-controller="Home" asp-action="ChangeLanguage" asp-route-culture="tr-TR"
+                                           class="dropdown-item">
+                                            <i class="flag-icon flag-icon-gb"></i> Türkçe
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Bize Ulaşın</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">@_localization.Getkey("Anasayfa").Value</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">@_localization.Getkey("Bize Ulaşın").Value</a>
+                        </li>
+
 
 
                         @if (User.IsInRole(UserRoles.Role_Admin))
-                        {                      
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="DoktorBrans" asp-action="Index">Branşlar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Doktor" asp-action="Index">Doktorlar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Randevu" asp-action="Index">Randevu İşlemleri</a>
-                        </li>
-                        }
-
-                         @if (User.IsInRole(UserRoles.Role_Hasta))
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Doktor" asp-action="Index">Doktor Listesi</a>
+                                <a class="nav-link" asp-area="" asp-controller="DoktorBrans" asp-action="Index">@_localization.Getkey("Branşlar").Value</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Doktor" asp-action="Index">@_localization.Getkey("Doktorlar").Value</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Randevu" asp-action="Index">@_localization.Getkey("Randevu İşlemleri").Value</a>
+                            </li>
+                        }
+
+                        @if (User.IsInRole(UserRoles.Role_Hasta))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Doktor" asp-action="Index">@_localization.Getkey("Doktor Listesi").Value</a>
                             </li>
                         }
 
 
                     </ul>
 
-                    <partial name="_LoginPartial"/>
+                    <partial name="_LoginPartial" />
 
 
                 </div>
@@ -66,7 +91,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Hastane Randevu Web Programlama - <a asp-area="" asp-controller="Home" asp-action="Privacy">İletişim</a>
+            &copy; 2023 - @_localization.Getkey("Hastane Randevu Web Programlama").Value - <a asp-area="" asp-controller="Home" asp-action="Privacy">@_localization.Getkey("İletişim").Value</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

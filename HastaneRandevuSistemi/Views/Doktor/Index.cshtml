@@ -25,7 +25,7 @@
 <div class="container">
     <div class="row pt-3 pb-4">
         <div>
-            <h1 class="text-primary">Doktorlar</h1>
+            <h1 class="text-primary"> @_localization.Getkey("Doktorlar").Value</h1>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
             <tr>
 
                 <th class="text-primary">
-                    Doktorlar
+                    @_localization.Getkey("Doktorlar").Value
                 </th>
 
                 @if (User.IsInRole(UserRoles.Role_Admin))
@@ -47,35 +47,35 @@
                     </th>
                 }
                 <th class="text-primary">
-                    Doktor Adı
+                    @_localization.Getkey("Doktor Adı").Value
                 </th>
 
                 <th class="text-primary">
-                    Poliklinik
+                    @_localization.Getkey("Poliklinik").Value
                 </th>
 
                 <th class="text-primary">
-                    Çalışma Gün ve Saatleri
+                    @_localization.Getkey("Çalışma Gün ve Saatleri").Value
                 </th>
 
                 <th class="text-primary">
-                    Branşı
+                    @_localization.Getkey("Branşı").Value
                 </th>
                 @if (User.IsInRole(UserRoles.Role_Hasta))
                 {
                     <th class="text-primary">
-                        Randevu Al
+                        @_localization.Getkey("Randevu Al").Value
                     </th>
                 }
 
                 @if (User.IsInRole(UserRoles.Role_Admin))
                 {
                     <th style="color:forestgreen">
-                        Güncelle
+                        @_localization.Getkey("Güncelle").Value
                     </th>
 
                     <th class="text-danger">
-                        Sil
+                        @_localization.Getkey("Sil").Value
                     </th>
                 }
 
@@ -107,17 +107,17 @@
                     @if (User.IsInRole(UserRoles.Role_Hasta))
                     {
                         <td align="center" valign="middle">
-                            <a asp-controller="Randevu" asp-action="RandevuAl" asp-route-id="@doktor.Id" type="button" class="btn btn-success btn-sm">Randevu Al</a>
+                            <a asp-controller="Randevu" asp-action="RandevuAl" asp-route-id="@doktor.Id" type="button" class="btn btn-success btn-sm"> @_localization.Getkey("Randevu Al").Value</a>
                         </td>
                     }
 
                     @if (User.IsInRole(UserRoles.Role_Admin))
                     {
                         <td align="center" valign="middle">
-                            <a asp-controller="Doktor" asp-action="EkleGuncelle" asp-route-id="@doktor.Id" type="button" class="btn btn-success btn-sm">Güncelle</a>
+                            <a asp-controller="Doktor" asp-action="EkleGuncelle" asp-route-id="@doktor.Id" type="button" class="btn btn-success btn-sm">@_localization.Getkey("Güncelle").Value</a>
                         </td>
                         <td align="center" valign="middle">
-                            <a asp-controller="Doktor" asp-action="Sil" asp-route-id="@doktor.Id" type="button" class="btn btn-danger btn-sm">Sil</a>
+                            <a asp-controller="Doktor" asp-action="Sil" asp-route-id="@doktor.Id" type="button" class="btn btn-danger btn-sm"> @_localization.Getkey("Sil").Value</a>
                         </td>
                     }
 
@@ -131,7 +131,7 @@
     {
         <div class="row pt-3 pb-2">
             <div>
-                <a asp-controller="Doktor" asp-action="EkleGuncelle" class="btn btn-lg btn-primary" type="button">Yeni Doktor Kaydı Oluştur</a>
+                <a asp-controller="Doktor" asp-action="EkleGuncelle" class="btn btn-lg btn-primary" type="button">@_localization.Getkey("Yeni Doktor Kaydı Oluştur").Value</a>
             </div>
         </div>
      }

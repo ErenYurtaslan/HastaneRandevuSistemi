@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row pt-3 pb-4">
         <div>
-            <h1 class="text-primary">Randevu İşlemleri</h1>
+            <h1 class="text-primary">@_localization.Getkey("Randevu İşlemleri").Value</h1>
         </div>
     </div>
     <table class="table table-bordered">
@@ -26,21 +26,21 @@
                     </th>
                 
                 <th class="text-primary">
-                    Hasta id
+                    @_localization.Getkey("Hasta id").Value
                     </th>
                 
 
                 <th class="text-primary">
-                    Doktor Adı
+                    @_localization.Getkey("Doktor Adı").Value
                 </th>
                
                     <th style="color:forestgreen">
-                        Güncelle
+                    @_localization.Getkey("Güncelle").Value
                     </th>
 
                     <th class="text-danger">
-                        Sil
-                    </th>
+                    @_localization.Getkey("Sil").Value
+                </th>
                 
                
 
@@ -66,10 +66,10 @@
 
                    
                         <td>
-                            <a asp-controller="Randevu" asp-action="EkleGuncelle" asp-route-id="@randevu.Id" type="button" class="btn btn-success btn-sm">Güncelle</a>
+                        <a asp-controller="Randevu" asp-action="EkleGuncelle" asp-route-id="@randevu.Id" type="button" class="btn btn-success btn-sm"> @_localization.Getkey("Güncelle").Value</a>
                         </td>
                         <td>
-                            <a asp-controller="Randevu" asp-action="Sil" asp-route-id="@randevu.Id" type="button" class="btn btn-danger btn-sm">Sil</a>
+                        <a asp-controller="Randevu" asp-action="Sil" asp-route-id="@randevu.Id" type="button" class="btn btn-danger btn-sm"> @_localization.Getkey("Sil").Value</a>
                         </td>
                                    
                     
@@ -81,7 +81,7 @@
   
         <div class="row pt-3 pb-2">
             <div>
-                <a asp-controller="Randevu" asp-action="EkleGuncelle" class="btn btn-lg btn-primary" type="button">Yeni Randevu Kaydı Oluştur</a>
+            <a asp-controller="Randevu" asp-action="EkleGuncelle" class="btn btn-lg btn-primary" type="button"> @_localization.Getkey("Yeni Randevu Oluştur").Value</a>
             </div>
         </div>
   

@@ -12,30 +12,31 @@
             <div class="border p-3 mt-5">
 
                 <div class="row pb-3">
-                    <h2 class="text-primary">Randevu Al</h2>
+                    <h2 class="text-primary">@_localization.Getkey("Randevu Al").Value</h2>
                     <br>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="HastaId" class="p-0"></label>
+                    <label asp-for="HastaId" class="p-0">@_localization.Getkey("HastaId").Value</label>
                     <input asp-for="HastaId" class="form-control" />
                     <span asp-validation-for="HastaId" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="DoktorId" class="p-0">Doktor Adı</label>
+                    <label asp-for="DoktorId" class="p-0">@_localization.Getkey("Doktor Adı").Value</label>
                     <select asp-for="DoktorId" asp-items="ViewBag.DoktorList" class="form-select"></select>
                     <span asp-validation-for="DoktorId" class="text-danger"></span>
                 </div>
 
 
-               
-                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Randevuyu Al</button>
+
+                <button type="submit" class="btn btn-lg btn-primary" style="width:250px"> @_localization.Getkey("Randevu Al").Value</button>
                
                 
 
                 <a asp-controller="Doktor" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
-                    Doktor Listesine Geri Dön
+                    @_localization.Getkey("Doktor Listesine Geri Dön").Value
+                    
                 </a>
 
             </div>

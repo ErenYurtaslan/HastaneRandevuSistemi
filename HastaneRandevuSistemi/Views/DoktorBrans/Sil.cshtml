@@ -13,20 +13,20 @@
     <div class="border p-3 mt-5">
 
         <div class="row pb-3">
-            <h2 class="text-primary">Doktor Branşını Sil</h2>
+            <h2 class="text-primary">  @_localization.Getkey("Doktor Branşını Sil").Value</h2>
             </hr>
         </div>
 
         <div class="mb-3">
-            <label asp-for="Ad" class="p-0"></label>
+            <label asp-for="Ad" class="p-0">@_localization.Getkey("Branş Adı").Value</label>
             <input asp-for="Ad" class="form-control" />
         </div>
 
 
-        <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Sil</button>
+        <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Sil").Value</button>
 
         <a asp-controller="DoktorBrans" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
-            Doktor Branşını Sil
+            @_localization.Getkey("Doktor Branşını Sil").Value
         </a>
 
     </div>

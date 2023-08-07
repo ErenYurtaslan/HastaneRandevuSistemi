@@ -11,18 +11,18 @@
             <div class="border p-3 mt-5">
 
                 <div class="row pb-3">
-                    <h2 class="text-primary">@(Model == null ? "Randevu Oluştur" : "Randevuyu Güncelle")</h2>
+                    <h2 class="text-primary">@(Model == null ? @_localization.Getkey("Randevu Oluştur").Value : @_localization.Getkey("Randevuyu Güncelle").Value)</h2>
                     <br>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="HastaId" class="p-0"></label>
+                    <label asp-for="HastaId" class="p-0">@_localization.Getkey("HastaId").Value</label>
                     <input asp-for="HastaId" class="form-control" />
                     <span asp-validation-for="HastaId" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="DoktorId" class="p-0"></label>
+                    <label asp-for="DoktorId" class="p-0">@_localization.Getkey("Doktor Adı").Value</label>
                     <select asp-for="DoktorId" asp-items="ViewBag.DoktorList" class="form-select"></select>
                     <span asp-validation-for="DoktorId" class="text-danger"></span>
                 </div>
@@ -30,16 +30,16 @@
 
                 @if (Model != null)
                 {
-                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Randevuyu Güncelle</button>
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Randevuyu Güncelle").Value</button>
                 }
                 else
                 {
-                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Yeni Randevu Oluştur</button>
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Yeni Randevu Oluştur").Value</button>
                 }
 
 
                 <a asp-controller="Randevu" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
-                    Randevulara Geri Dön
+                    @_localization.Getkey("Randevulara Geri Dön").Value
                 </a>
 
             </div>

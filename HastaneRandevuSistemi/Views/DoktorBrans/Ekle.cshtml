@@ -7,21 +7,21 @@
     <div class="border p-3 mt-5">
 
         <div class="row pb-3">
-            <h2 class="text-primary">Yeni Branş Ekle</h2>
+            <h2 class="text-primary">@_localization.Getkey("Yeni Branş Ekle").Value</h2>
             <br>
         </div>
         
        <div class="mb-3">
-            <label asp-for="Ad" class="p-0"></label>
+            <label asp-for="Ad" class="p-0">@_localization.Getkey("Branş Adı").Value</label>
             <input asp-for="Ad" class="form-control"/>
             <span asp-validation-for="Ad" class="text-danger"></span>
        </div>
 
 
-        <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Yeni Doktor Branşını Ekle</button>
+        <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Yeni Doktor Branşını Ekle").Value</button>
 
         <a asp-controller="DoktorBrans" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
-            Branş Listesine Geri Dön
+            @_localization.Getkey("Branş Listesine Geri Dön").Value
         </a>
 
     </div>

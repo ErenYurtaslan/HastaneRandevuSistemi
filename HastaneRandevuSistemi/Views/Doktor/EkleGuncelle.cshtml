@@ -17,30 +17,30 @@
             <div class="border p-3 mt-5">
 
                 <div class="row pb-3">
-                    <h2 class="text-primary">@(Model == null ? "Doktor Ekle" : "Doktor Güncelle")</h2>
+                    <h2 class="text-primary">@(Model == null ? @_localization.Getkey("Doktor Ekle").Value : @_localization.Getkey("Doktoru Güncelle").Value)</h2>
                     <br>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="DoktorAdi" class="p-0"></label>
+                    <label asp-for="DoktorAdi" class="p-0">@_localization.Getkey("Doktor Adı:").Value</label>
                     <input asp-for="DoktorAdi" class="form-control" />
                     <span asp-validation-for="DoktorAdi" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="DoktorBransId" class="p-0"></label>
+                    <label asp-for="DoktorBransId" class="p-0">@_localization.Getkey("Branşı:").Value</label>
                     <select asp-for="DoktorBransId" asp-items="ViewBag.DoktorBransList" class="form-select"></select>
                     <span asp-validation-for="DoktorBransId" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="Poliklinik" class="p-0"></label>
+                    <label asp-for="Poliklinik" class="p-0">@_localization.Getkey("Poliklinik:").Value</label>
                     <input asp-for="Poliklinik" class="form-control" />
                     <span asp-validation-for="Poliklinik" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="Calisma" class="p-0"></label>
+                    <label asp-for="Calisma" class="p-0">@_localization.Getkey("Çalışma Günleri-Saatleri:").Value</label>
                     <input asp-for="Calisma" class="form-control" />
                     <span asp-validation-for="Calisma" class="text-danger"></span>
                 </div>
@@ -48,23 +48,23 @@
                
 
                 <div class="mb-3">
-                    <label asp-for="ResimUrl" class="p-0"></label>
+                    <label asp-for="ResimUrl" class="p-0">@_localization.Getkey("Resim Yükle:").Value</label>
                     <input type="file" name="file" class="form-control" />
                 </div>
 
 
                 @if (Model != null)
                 {
-                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Doktor Güncelle</button>
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Doktor Güncelle").Value</button>
                 }
                 else
                 {
-                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">Doktor Ekle</button>
+                    <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Doktor Ekle").Value</button>
                 }
 
 
                 <a asp-controller="Doktor" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
-                    Doktor Listesine Geri Dön
+                    @_localization.Getkey("Doktor Listesine Geri Dön").Value
                 </a>
 
             </div>

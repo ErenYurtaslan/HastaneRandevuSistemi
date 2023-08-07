@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row pt-3 pb-4">
         <div>
-            <h1 class="text-primary">Doktor Branşları</h1>
+            <h1 class="text-primary"> @_localization.Getkey("Doktor Branşları").Value</h1>
         </div>
     </div>
     <table class="table table-bordered">
@@ -25,15 +25,15 @@
                 </th>
 
                 <th class="text-primary">
-                    Doktor Branşları
+                    @_localization.Getkey("Doktor Branşları").Value
                 </th>
 
                 <th class="text-succcess">
-                    Güncelle
+                    @_localization.Getkey("Güncelle").Value
                 </th>
 
                 <th class="text-danger">
-                    Sil
+                    @_localization.Getkey("Sil").Value
                 </th>
             </tr>
 
@@ -50,10 +50,10 @@
                     <td>@doktorBranslari.Id</td>
                     <td>@doktorBranslari.Ad</td>
                     <td>
-                        <a asp-controller="DoktorBrans" asp-action="Guncelle" asp-route-id="@doktorBranslari.Id" type="button" class="btn btn-success btn-sm">Güncelle</a>
+                        <a asp-controller="DoktorBrans" asp-action="Guncelle" asp-route-id="@doktorBranslari.Id" type="button" class="btn btn-success btn-sm"> @_localization.Getkey("Güncelle").Value</a>
                     </td>
                     <td>
-                        <a asp-controller="DoktorBrans" asp-action="Sil" asp-route-id="@doktorBranslari.Id" type="button" class="btn btn-danger btn-sm">Sil</a>
+                        <a asp-controller="DoktorBrans" asp-action="Sil" asp-route-id="@doktorBranslari.Id" type="button" class="btn btn-danger btn-sm">@_localization.Getkey("Sil").Value</a>
                     </td>
                 </tr>
             }
@@ -63,7 +63,7 @@
 
     <div class="row pt-3 pb-2">
         <div>
-            <a asp-controller="DoktorBrans" asp-action="Ekle" class="btn btn-lg btn-primary" type="button">Yeni Branş Ekle</a>
+            <a asp-controller="DoktorBrans" asp-action="Ekle" class="btn btn-lg btn-primary" type="button"> @_localization.Getkey("Yeni Branş Ekle").Value</a>
         </div>
     </div>
 
