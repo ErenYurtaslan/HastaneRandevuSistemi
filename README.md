@@ -5,3 +5,4 @@ Admin girişi, hasta girişi ve girişsiz olarak 3 parça olan sitemizde; sunucu
 Proje kodlarımızın, S.O.L.I.D. prensiplerine uygun olarak yazılmasına gayret edilmiştir.(esnek, clean code'a uygun, arabirimli, gereksiz koddan ve sınıftan kaçınma)
 Login yapılmadığı takdirde sadece "Anasayfa" ve "Bize Ulaşın" butonları aktif olurken, hasta olarak login yapıldığında bu ikisine ek olarak "Doktorlar" butonu da gelmektedir. Bu 3. butonun içeriğinde hasta, doktorun kendisini ilgilendiren verilerini görmekle beraber sadece randevu alma işlemi yapabilmektedir.
 Admin ise yukarıda belirtildiği gibi tüm verilere erişebilir ve değiştirebilir pozisyondadır.
+Asp.Net Core 7.0 sürümüne uyumlu olarak yabancı dil dosyaları eklenmiş olup, hem Türkçe hem de İngilizce ayarı sağlanmıştır.
