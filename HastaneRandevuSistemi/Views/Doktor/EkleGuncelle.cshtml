@@ -40,12 +40,16 @@
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="Calisma" class="p-0">@_localization.Getkey("Çalışma Günleri-Saatleri:").Value</label>
+                    <label asp-for="Calisma" class="p-0">TR - @_localization.Getkey("Çalışma Günleri-Saatleri:").Value</label>
                     <input asp-for="Calisma" class="form-control" />
                     <span asp-validation-for="Calisma" class="text-danger"></span>
                 </div>
 
-               
+                <div class="mb-3">
+                    <label asp-for="CalismaEng" class="p-0">EN - @_localization.Getkey("Çalışma Günleri-Saatleri:").Value</label>
+                    <input asp-for="CalismaEng" class="form-control" />
+                    <span asp-validation-for="CalismaEng" class="text-danger"></span>
+                </div>
 
                 <div class="mb-3">
                     <label asp-for="ResimUrl" class="p-0">@_localization.Getkey("Resim Yükle:").Value</label>

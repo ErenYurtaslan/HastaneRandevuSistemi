@@ -102,8 +102,27 @@
                     }
                     <td align="center" valign="middle">@doktor.DoktorAdi</td>
                     <td align="center" valign="middle">@doktor.Poliklinik</td>
-                    <td align="center" valign="middle">@doktor.Calisma</td>
-                    <td align="center" valign="middle">@doktor.DoktorBrans?.Ad</td>
+                    <td align="center" valign="middle">
+                        @if (Thread.CurrentThread.CurrentCulture.Name.ToString() == "en-US")
+                        {
+                            @doktor.CalismaEng
+                        }
+                        else{
+                            @doktor.Calisma
+                            }
+                                              
+                    </td>
+                    <td align="center" valign="middle">
+                        @if (Thread.CurrentThread.CurrentCulture.Name.ToString() == "en-US")
+                        {
+                            @doktor.DoktorBrans?.AdEng
+                        }
+                        else
+                        {
+                            @doktor.DoktorBrans?.Ad
+                        }
+                       
+                        </td>
                     @if (User.IsInRole(UserRoles.Role_Hasta))
                     {
                         <td align="center" valign="middle">

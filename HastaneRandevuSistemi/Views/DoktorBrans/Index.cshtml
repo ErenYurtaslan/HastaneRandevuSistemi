@@ -48,7 +48,17 @@
 
                 <tr>
                     <td>@doktorBranslari.Id</td>
-                    <td>@doktorBranslari.Ad</td>
+                    <td>
+                        @if (Thread.CurrentThread.CurrentCulture.Name.ToString() == "en-US")
+                        {
+                            @doktorBranslari.AdEng
+                        }
+                        else
+                        {
+                            @doktorBranslari.Ad
+                        }                       
+                        
+                    </td>
                     <td>
                         <a asp-controller="DoktorBrans" asp-action="Guncelle" asp-route-id="@doktorBranslari.Id" type="button" class="btn btn-success btn-sm"> @_localization.Getkey("Güncelle").Value</a>
                     </td>

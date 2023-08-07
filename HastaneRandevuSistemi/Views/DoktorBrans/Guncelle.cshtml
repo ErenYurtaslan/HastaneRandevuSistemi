@@ -18,11 +18,16 @@
         </div>
 
         <div class="mb-3">
-            <label asp-for="Ad" class="p-0">@_localization.Getkey("Branş Adı").Value</label>
+            <label asp-for="Ad" class="p-0">TR - @_localization.Getkey("Branş Adı").Value</label>
             <input asp-for="Ad" class="form-control" />
             <span asp-validation-for="Ad" class="text-danger"></span>
         </div>
 
+        <div class="mb-3">
+            <label asp-for="AdEng" class="p-0">EN - @_localization.Getkey("Branş Adı").Value</label>
+            <input asp-for="AdEng" class="form-control" />
+            <span asp-validation-for="AdEng" class="text-danger"></span>
+        </div>
 
         <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Güncelle").Value</button>
 

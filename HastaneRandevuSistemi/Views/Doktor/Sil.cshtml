@@ -29,11 +29,14 @@
         </div>
 
         <div class="mb-3">
-            <label asp-for="Calisma" class="p-0">@_localization.Getkey("Çalışma Günleri-Saatleri:").Value</label>
+            <label asp-for="Calisma" class="p-0">TR - @_localization.Getkey("Çalışma Günleri-Saatleri:").Value</label>
             <input asp-for="Calisma" disabled class="form-control" />
         </div>
 
-       
+        <div class="mb-3">
+            <label asp-for="CalismaEng" class="p-0">EN - @_localization.Getkey("Çalışma Günleri-Saatleri:").Value</label>
+            <input asp-for="CalismaEng" disabled class="form-control" />
+        </div>
 
 
         <button type="submit" class="btn btn-lg btn-primary" style="width:250px">@_localization.Getkey("Doktoru Sil").Value</button>
