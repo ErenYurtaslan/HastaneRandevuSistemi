@@ -1,4 +1,5 @@
 ﻿using HastaneRandevuSistemi.Models;
+using HastaneRandevuSistemi.Services;
 using HastaneRandevuSistemi.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,12 +19,14 @@ namespace HastaneRandevuSistemi.Controllers
         private readonly IDoktorRepository _doktorRepository;
         private readonly IDoktorBransRepository _doktorBransRepository;
         public readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly LanguageService _localization;
 
-        public DoktorController(IDoktorRepository doktorRepository, IDoktorBransRepository doktorBransRepository, IWebHostEnvironment webHostEnvironment)
+        public DoktorController(IDoktorRepository doktorRepository, IDoktorBransRepository doktorBransRepository, IWebHostEnvironment webHostEnvironment, LanguageService localization)
         {
             _doktorRepository = doktorRepository;
             _doktorBransRepository = doktorBransRepository;
             _webHostEnvironment = webHostEnvironment;
+            _localization = localization;   
         }
 
        [Authorize(Roles = "Admin , Hasta")]
@@ -108,12 +111,12 @@ namespace HastaneRandevuSistemi.Controllers
                 if (doktor.Id == 0)
                 {
                     _doktorRepository.Ekle(doktor);
-                    TempData["basarili"] = "Doktor kayıt ekleme işlemi başarılı!";
+                    TempData["basarili"] = @_localization.Getkey("Doktor kayıt ekleme işlemi başarılı!").Value;
                 }
                 else
                 {
                     _doktorRepository.Guncelle(doktor);
-                    TempData["basarili"] = "Doktor kayıt güncelleme işlemi başarılı!";
+                    TempData["basarili"] = @_localization.Getkey("Doktor kayıt güncelleme işlemi başarılı!").Value;
                 }
 
                 _doktorRepository.Kaydet();//bunu yapmazsan db'ye bilgiler eklenmez.
@@ -195,7 +198,7 @@ namespace HastaneRandevuSistemi.Controllers
             {
                 _doktorRepository.Sil(doktor);
                 _doktorRepository.Kaydet();
-                TempData["basarili"] = "Doktor kayıt silme işlemi başarılı!";
+                TempData["basarili"] = @_localization.Getkey("Doktor kayıt silme işlemi başarılı!").Value;
                 return RedirectToAction("Index", "Doktor");
             }
 

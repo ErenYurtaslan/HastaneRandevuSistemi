@@ -3,6 +3,7 @@ using HastaneRandevuSistemi.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using HastaneRandevuSistemi.Services;
 
 namespace HastaneRandevuSistemi.Controllers
 {
@@ -11,10 +12,12 @@ namespace HastaneRandevuSistemi.Controllers
     public class DoktorBransController : Controller
     {
         private readonly IDoktorBransRepository _doktorBransRepository;
+        private readonly LanguageService _localization;
 
-        public DoktorBransController(IDoktorBransRepository context)
+        public DoktorBransController(IDoktorBransRepository context, LanguageService localization)
         {
             _doktorBransRepository = context;
+            _localization = localization;
         }
 
 
@@ -45,7 +48,7 @@ namespace HastaneRandevuSistemi.Controllers
                 _doktorBransRepository.Ekle(doktorBransEkle);
                 _doktorBransRepository.Kaydet();//bunu yapmazsan db'ye bilgiler eklenmez.
 
-                TempData["basarili"] = "Doktor Branşı ekleme işlemi başarılı!";
+                TempData["basarili"] = @_localization.Getkey("Doktor Branşı ekleme işlemi başarılı!").Value;
 
                 return RedirectToAction("Index", "DoktorBrans");
             }
@@ -123,7 +126,7 @@ namespace HastaneRandevuSistemi.Controllers
                 _doktorBransRepository.Guncelle(doktorBransGuncelle);
                 _doktorBransRepository.Kaydet();
 
-                TempData["basarili"] = "Doktor Branşı güncelleme işlemi başarılı!";
+                TempData["basarili"] = @_localization.Getkey("Doktor Branşı güncelleme işlemi başarılı!").Value;
 
                 return RedirectToAction("Index", "DoktorBrans");
             }
@@ -207,7 +210,7 @@ namespace HastaneRandevuSistemi.Controllers
             {
                 _doktorBransRepository.Sil(doktorBrans);
                 _doktorBransRepository.Kaydet();
-                TempData["basarili"] = "Doktor Branşı silme işlemi başarılı!";
+                TempData["basarili"] = @_localization.Getkey("Doktor Branşı silme işlemi başarılı!").Value;
                 return RedirectToAction("Index", "DoktorBrans");
             }
         }

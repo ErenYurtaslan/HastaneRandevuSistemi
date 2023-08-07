@@ -1,4 +1,5 @@
 ﻿using HastaneRandevuSistemi.Models;
+using HastaneRandevuSistemi.Services;
 using HastaneRandevuSistemi.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,12 +16,14 @@ namespace HastaneRandevuSistemi.Controllers
         private readonly IRandevuRepository _randevuRepository;
         private readonly IDoktorRepository _doktorRepository;
         public readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly LanguageService _localization;
 
-        public RandevuController(IRandevuRepository randevuRepository, IDoktorRepository doktorRepository, IWebHostEnvironment webHostEnvironment)
+        public RandevuController(IRandevuRepository randevuRepository, IDoktorRepository doktorRepository, IWebHostEnvironment webHostEnvironment, LanguageService localization)
         {
             _randevuRepository = randevuRepository;
             _doktorRepository = doktorRepository;
             _webHostEnvironment = webHostEnvironment;
+            _localization = localization;
         }
 
         [Authorize(Roles = UserRoles.Role_Admin)]
@@ -89,12 +92,12 @@ namespace HastaneRandevuSistemi.Controllers
                 if (randevu.Id == 0)
                 {
                     _randevuRepository.Ekle(randevu);
-                    TempData["basarili"] = "Yeni randevu kaydedildi!";
+                    TempData["basarili"] = @_localization.Getkey("Yeni randevu kaydedildi!").Value;
                 }
                 else
                 {
                     _randevuRepository.Guncelle(randevu);
-                    TempData["basarili"] = "Randevu güncellendi!";
+                    TempData["basarili"] = @_localization.Getkey("Randevu güncellendi!").Value;
                 }
 
                 _randevuRepository.Kaydet();//bunu yapmazsan db'ye bilgiler eklenmez.
@@ -154,9 +157,9 @@ namespace HastaneRandevuSistemi.Controllers
 
 
                _randevuRepository.Ekle(randevu);
-                TempData["basarili1"] = "Yeni randevu alındı!";
-               
-                    
+                TempData["basarili1"] = @_localization.Getkey("Yeni randevu alındı!").Value;
+
+
 
                 _randevuRepository.Kaydet();//bunu yapmazsan db'ye bilgiler eklenmez.
 
@@ -244,7 +247,7 @@ namespace HastaneRandevuSistemi.Controllers
             {
                 _randevuRepository.Sil(randevu);
                 _randevuRepository.Kaydet();
-                TempData["basarili"] = "Randevu silindi!";
+                TempData["basarili"] = @_localization.Getkey("Randevu silindi!").Value;
                 return RedirectToAction("Index", "Randevu");
             }
         }
