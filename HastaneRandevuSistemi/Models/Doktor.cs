@@ -26,11 +26,14 @@ namespace HastaneRandevuSistemi.Models
         public required string Calisma { get; set; }
 
 
+        [Required]
+        [DisplayName("Working Days-Hours:")]
+        public required string CalismaEng { get; set; }
+
 
         [DisplayName("Branşı:")]
         [ValidateNever]
         public int? DoktorBransId { get; set; }
-
 
 
 

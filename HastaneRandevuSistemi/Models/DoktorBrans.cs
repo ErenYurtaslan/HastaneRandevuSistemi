@@ -12,5 +12,11 @@ namespace HastaneRandevuSistemi.Models
         [MaxLength(25)]
         [DisplayName("Doktorun Branşı:")]
         public string Ad { get; set; }
+
+
+        [Required(ErrorMessage = "Branch name cannot be left blank.")] //not null
+        [MaxLength(25)]
+        [DisplayName("Doctor's Branch:")]
+        public string AdEng { get; set; }
     }
 }
