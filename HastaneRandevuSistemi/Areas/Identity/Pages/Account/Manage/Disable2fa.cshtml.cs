@@ -36,12 +36,12 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"'{_userManager.GetUserId(User)}' kimliğine sahip kullanıcı yüklenemiyor.");
             }
 
             if (!await _userManager.GetTwoFactorEnabledAsync(user))
             {
-                throw new InvalidOperationException($"Cannot disable 2FA for user as it's not currently enabled.");
+                throw new InvalidOperationException($"Şu anda etkin olmadığı için kullanıcı için 2FA devre dışı bırakılamıyor.");
             }
 
             return Page();
@@ -52,17 +52,17 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"'{_userManager.GetUserId(User)}' kimliğine sahip kullanıcı yüklenemiyor.");
             }
 
             var disable2faResult = await _userManager.SetTwoFactorEnabledAsync(user, false);
             if (!disable2faResult.Succeeded)
             {
-                throw new InvalidOperationException($"Unexpected error occurred disabling 2FA.");
+                throw new InvalidOperationException($"2FA devre dışı bırakılırken beklenmeyen bir hata oluştu.");
             }
 
-            _logger.LogInformation("User with ID '{UserId}' has disabled 2fa.", _userManager.GetUserId(User));
-            StatusMessage = "2fa has been disabled. You can reenable 2fa when you setup an authenticator app";
+            _logger.LogInformation("'{UserId}' kimlikli kullanıcı 2fa'yı devre dışı bıraktı.", _userManager.GetUserId(User));
+            StatusMessage = "2fa devre dışı bırakıldı. Bir kimlik doğrulama uygulaması kurduğunuzda 2fa'yı yeniden etkinleştirebilirsiniz";
             return RedirectToPage("./TwoFactorAuthentication");
         }
     }

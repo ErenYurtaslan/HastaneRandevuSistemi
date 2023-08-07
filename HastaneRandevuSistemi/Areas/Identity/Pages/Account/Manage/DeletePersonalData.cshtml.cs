@@ -61,7 +61,7 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"'{_userManager.GetUserId(User)}' kimliğine sahip kullanıcı yüklenemiyor.");
             }
 
             RequirePassword = await _userManager.HasPasswordAsync(user);
@@ -73,7 +73,7 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"'{_userManager.GetUserId(User)}' kimliğine sahip kullanıcı yüklenemiyor.");
             }
 
             RequirePassword = await _userManager.HasPasswordAsync(user);
@@ -81,7 +81,7 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account.Manage
             {
                 if (!await _userManager.CheckPasswordAsync(user, Input.Password))
                 {
-                    ModelState.AddModelError(string.Empty, "Incorrect password.");
+                    ModelState.AddModelError(string.Empty, "Yanlış parola.");
                     return Page();
                 }
             }
@@ -90,12 +90,12 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account.Manage
             var userId = await _userManager.GetUserIdAsync(user);
             if (!result.Succeeded)
             {
-                throw new InvalidOperationException($"Unexpected error occurred deleting user.");
+                throw new InvalidOperationException($"Kullanıcı silinirken beklenmeyen bir hata oluştu.");
             }
 
             await _signInManager.SignOutAsync();
 
-            _logger.LogInformation("User with ID '{UserId}' deleted themselves.", userId);
+            _logger.LogInformation("'{UserId}' kimlikli kullanıcı kendini sildi.", userId);
 
             return Redirect("~/");
         }

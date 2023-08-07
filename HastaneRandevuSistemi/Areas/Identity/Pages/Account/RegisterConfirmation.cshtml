@@ -1,7 +1,7 @@
 ﻿@page
 @model RegisterConfirmationModel
 @{
-    ViewData["Title"] = "Kayıt Onayı";
+    ViewData["Title"] = @_localization.Getkey("Kayıt Onayı").Value;
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -9,13 +9,13 @@
     if (@Model.DisplayConfirmAccountLink)
     {
 <p>
-            Bu uygulamanın şu anda kayıtlı gerçek bir e-posta göndericisi yok, gerçek bir e-posta göndericisinin nasıl yapılandırılacağını öğrenmek için <a href="https://aka.ms/aspaccountconf">bu belgelere bakın.</a> Normalde bu e-postayla gönderilir: Hesabınızı onaylamak için <a id="confirm-link" href="@Model.EmailConfirmationUrl">burayı tıklayın.</a>
+            @_localization.Getkey("Bu uygulamanın şu anda kayıtlı gerçek bir e-posta göndericisi yok, gerçek bir e-posta göndericisinin nasıl yapılandırılacağını öğrenmek için bu belgelere bakın.").Value  <a href="https://aka.ms/aspaccountconf">https://aka.ms/aspaccountconf</a> @_localization.Getkey("Normalde bu e-postayla gönderilir: Hesabınızı onaylamak için burayı tıklayın:").Value<a id="confirm-link" href="@Model.EmailConfirmationUrl">=>=</a>
 </p>
     }
     else
     {
 <p>
-        Please check your email to confirm your account.
+            @_localization.Getkey("Hesabınızı onaylamak için lütfen e-postanızı kontrol edin.").Value
 </p>
     }
 }

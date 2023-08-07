@@ -41,14 +41,14 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{userId}'.");
+                return NotFound($"'{userId}' kimlikli kullanıcı yüklenemiyor.");
             }
 
             code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
             var result = await _userManager.ChangeEmailAsync(user, email, code);
             if (!result.Succeeded)
             {
-                StatusMessage = "Error changing email.";
+                StatusMessage = "E-posta değiştirilirken hata oluştu.";
                 return Page();
             }
 
@@ -57,12 +57,12 @@ namespace HastaneRandevuSistemi.Areas.Identity.Pages.Account
             var setUserNameResult = await _userManager.SetUserNameAsync(user, email);
             if (!setUserNameResult.Succeeded)
             {
-                StatusMessage = "Error changing user name.";
+                StatusMessage = "Kullanıcı adı değiştirilirken hata oluştu.";
                 return Page();
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Thank you for confirming your email change.";
+            StatusMessage = "E-posta değişikliğinizi onayladığınız için teşekkür ederiz.";
             return Page();
         }
     }

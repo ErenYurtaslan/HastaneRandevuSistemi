@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Giriş Yap";
+    ViewData["Title"] = @_localization.Getkey("Giriş Yap").Value;
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -10,37 +10,37 @@
     <div class="col-md-4">
         <section>
             <form id="account" method="post">
-                <h2>Oturum açmak için yerel bir hesap kullanın.</h2>
+                <h2>@_localization.Getkey("Oturum açmak için yerel bir hesap kullanın.").Value</h2>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.Email" class="form-label">E-Posta</label>
+                    <label asp-for="Input.Email" class="form-label">@_localization.Getkey("E-Posta").Value</label>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Şifre</label>
+                    <label asp-for="Input.Password" class="form-label">@_localization.Getkey("Şifre").Value</label>
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
                 <div class="checkbox mb-3">
                     <label asp-for="Input.RememberMe" class="form-label">
                         <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        @_localization.Getkey("Beni Hatırla?").Value
                     </label>
                 </div>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Giriş Yap</button>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">@_localization.Getkey("Giriş Yap").Value</button>
                 </div>
                 <div>
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Şifrenizi mi unuttunuz?</a>
+                        <a id="forgot-password" asp-page="./ForgotPassword">@_localization.Getkey("Şifrenizi mi unuttunuz?").Value</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Yeni bir kullanıcı olarak kaydolun.</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">@_localization.Getkey("Yeni bir kullanıcı olarak kaydolun.").Value</a>
                     </p>
                     <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">E-posta onayını yeniden gönderin.</a>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">@_localization.Getkey("E-posta onayını yeniden gönderin.").Value</a>
                     </p>
                 </div>
             </form>
@@ -49,7 +49,7 @@
     <div class="col-md-6 col-md-offset-2">
         <section>
             <h3>
-                Oturum açmak için başka bir hizmet kullanın.
+                @_localization.Getkey("Oturum açmak için başka bir hizmet kullanın.").Value
             </h3>
             <hr />
             @{
@@ -57,10 +57,10 @@
                 {
                     <div>
                         <p>
-                            Yapılandırılmış harici kimlik doğrulama hizmeti yok.
-                            Harici hizmetler aracılığıyla oturum açmayı desteklemek için bu ASP.NET uygulamasını ayarlama hakkında <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
-                            bu makaleye bakın
-                            </a>.
+                            @_localization.Getkey("Yapılandırılmış harici kimlik doğrulama hizmeti yok.").Value
+                            @_localization.Getkey("Harici hizmetler aracılığıyla oturum açmayı desteklemek için bu ASP.NET uygulamasını ayarlama hakkında bu makaleye bakın:").Value <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
+                                https://go.microsoft.com/fwlink/?LinkID=532715
+                            </a>
                         </p>
                     </div>
                 }

@@ -1,7 +1,7 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Kaydol";
+    ViewData["Title"] = @_localization.Getkey("Kaydol").Value;
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -9,43 +9,43 @@
 <div class="row">
     <div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Yeni bir hesap oluşturun.</h2>
+            <h2>@_localization.Getkey("Yeni bir hesap oluşturun.").Value</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
             <div class="form-floating mb-3">
                 <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">E-Posta</label>
+                <label asp-for="Input.Email">@_localization.Getkey("E-Posta").Value</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Şifre</label>
+                <label asp-for="Input.Password">@_localization.Getkey("Şifre").Value</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
                 <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Şifreyi Onaylayın</label>
+                <label asp-for="Input.ConfirmPassword">@_localization.Getkey("Şifreyi Onaylayın").Value</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
                 <input asp-for="Input.HastaNo" class="form-control"  aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.HastaNo">Hasta Numarası</label>
+                <label asp-for="Input.HastaNo">@_localization.Getkey("Hasta Numarası").Value</label>
                 <span asp-validation-for="Input.HastaNo" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
                 <input asp-for="Input.Adres" class="form-control" placeholder="name@example.com" />
-                <label asp-for="Input.Adres">Adres</label>
+                <label asp-for="Input.Adres">@_localization.Getkey("Adres").Value</label>
                 <span asp-validation-for="Input.Adres" class="text-danger"></span>
             </div>
            
             
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Kaydol</button>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">@_localization.Getkey("Kaydol").Value</button>
         </form>
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
             <h3>
-                Kaydolmak için başka bir hizmet kullanın.
+                @_localization.Getkey("Kaydolmak için başka bir hizmet kullanın.").Value
             </h3>
             <hr />
             @{
@@ -53,11 +53,9 @@
                 {
                     <div>
                         <p>
-                            Yapılandırılmış harici kimlik doğrulama hizmeti yok. 
-                            Harici hizmetler aracılığıyla oturum açmayı desteklemek
-                            için bu ASP.NET uygulamasını ayarlama hakkında  <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
-                            bu makaleye bakın
-                            </a>.
+                            @_localization.Getkey("Yapılandırılmış harici kimlik doğrulama hizmeti yok.Harici hizmetler aracılığıyla oturum açmayı desteklemek için bu ASP.NET uygulamasını ayarlama hakkında bu makaleye bakın:").Value  <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
+                                https://go.microsoft.com/fwlink/?LinkID=532715
+                            </a>
                         </p>
                     </div>
                 }
