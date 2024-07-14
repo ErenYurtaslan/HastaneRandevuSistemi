@@ -1,5 +1,5 @@
 # Hastane Randevu Sistemi
-Hastane Randevu Sistemi Web Programlama Ödevi
+Hastane Randevu Sistemi Web Programlama Projesi
 
 Admin girişi, hasta girişi ve girişsiz olarak 3 parça olan sitemizde; sunucu tarafında doktorların branşları, isimleri, fotoğrafları, çalışma gün ve saatleri, ekleme-güncelleme-silme işlemleri(CRUD), tüm bu bilgilerin çekildiği SQLServer veri tabanı bulunmakla beraber, hem hastaların hem de adminin randevu kaydı oluşturabileceği ve bunların veri tabanında aynı tabloya kaydedileceği bir algoritma düzenlenmiştir.
 Proje kodlarımızın, S.O.L.I.D. prensiplerine uygun olarak yazılmasına gayret edilmiştir.(esnek, clean code'a uygun, arabirimli, gereksiz koddan ve sınıftan kaçınma)
